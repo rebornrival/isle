@@ -13,3 +13,8 @@ config_version=5
 config/name="ISLE"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/decals/filter=0
+textures/light_projectors/filter=0
