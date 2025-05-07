@@ -1,0 +1,15 @@
+Card initialization information:
+#0 - name - str
+#1 - base health - int
+#2 - health mult - int
+#3 - current health - int
+#4 - base damage - int
+#5 - damage mult - int
+#6 - current damage - int
+#7 - description - str
+#8 - ability name - str
+#9 - type (bug etc.) - str
+#10 - location acquired - str
+#11 - by water? - boolean
+#12 - rarity - str
+#13 - type (support, etc.) - str
