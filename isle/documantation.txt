@@ -1,0 +1,11 @@
+Card initialization information:
+#0 - name - str
+#1 - base health - int
+#2 - base damage - int
+#3 - description - str
+#4 - ability name - str
+#5 - type (bug etc.) - str
+#6 - location acquired - str
+#7 - rarity - str
+#8 - type (support, etc.) - str
+#9 - cost - int
