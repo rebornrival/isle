@@ -6,7 +6,6 @@ Card initialization information:
 #4 - ability name - str
 #5 - type (bug etc.) - str
 #6 - location acquired - str
-#7 - by water? - boolean
-#8 - rarity - str
-#9 - type (support, etc.) - str
-#10 - cost - int
+#7 - rarity - str
+#8 - type (support, etc.) - str
+#9 - cost - int
