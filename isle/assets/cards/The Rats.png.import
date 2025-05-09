@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vprmu35xp6xv"
-path="res://.godot/imported/spider.png-b39d6117054d9ec3c796d37fbb0a7fdc.ctex"
+uid="uid://c3in86viary7"
+path="res://.godot/imported/The Rats.png-b983fccf587837e184fd47e6a55f3fe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spider.png"
-dest_files=["res://.godot/imported/spider.png-b39d6117054d9ec3c796d37fbb0a7fdc.ctex"]
+source_file="res://assets/cards/The Rats.png"
+dest_files=["res://.godot/imported/The Rats.png-b983fccf587837e184fd47e6a55f3fe2.ctex"]
 
 [params]
 

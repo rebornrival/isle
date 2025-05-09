@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://12fymehtgg52"
-path="res://.godot/imported/glorbo.png-8e72aaa34ee5e12aa2b121e5f7d1ecd2.ctex"
+uid="uid://b10gl8ujjiay0"
+path="res://.godot/imported/Heart_of_Void.png-cfde0e3fd5d9976da0eb0d3d1d216189.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/glorbo.png"
-dest_files=["res://.godot/imported/glorbo.png-8e72aaa34ee5e12aa2b121e5f7d1ecd2.ctex"]
+source_file="res://assets/cards/Heart_of_Void.png"
+dest_files=["res://.godot/imported/Heart_of_Void.png-cfde0e3fd5d9976da0eb0d3d1d216189.ctex"]
 
 [params]
 

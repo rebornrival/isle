@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b10gl8ujjiay0"
-path="res://.godot/imported/Heart_of_Void.png-e467d259e6ffe004a7bec3eeb66c97f4.ctex"
+uid="uid://vprmu35xp6xv"
+path="res://.godot/imported/spider.png-4e27b2700b3665c67592a675b65572b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Heart_of_Void.png"
-dest_files=["res://.godot/imported/Heart_of_Void.png-e467d259e6ffe004a7bec3eeb66c97f4.ctex"]
+source_file="res://assets/cards/spider.png"
+dest_files=["res://.godot/imported/spider.png-4e27b2700b3665c67592a675b65572b0.ctex"]
 
 [params]
 

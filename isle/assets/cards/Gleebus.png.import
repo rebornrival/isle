@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3in86viary7"
-path="res://.godot/imported/The Rats.png-d9f06b9fc868f189254875ca51af0c8d.ctex"
+uid="uid://dbrm0ykitvx3n"
+path="res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/The Rats.png"
-dest_files=["res://.godot/imported/The Rats.png-d9f06b9fc868f189254875ca51af0c8d.ctex"]
+source_file="res://assets/cards/Gleebus.png"
+dest_files=["res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"]
 
 [params]
 
