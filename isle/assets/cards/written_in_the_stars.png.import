@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8wjyqfxrdlig"
-path="res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"
+uid="uid://dxyavlwgoy1p5"
+path="res://.godot/imported/written_in_the_stars.png-363a6db3e4db4524cf4765f6c0a0725b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Gleebus.png"
-dest_files=["res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"]
+source_file="res://assets/cards/written_in_the_stars.png"
+dest_files=["res://.godot/imported/written_in_the_stars.png-363a6db3e4db4524cf4765f6c0a0725b.ctex"]
 
 [params]
 
