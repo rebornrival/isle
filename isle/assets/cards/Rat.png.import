@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddpxl2ny60jm3"
-path="res://.godot/imported/isopod.png-f6f7cece6d302d7bfa9d7fc4638b43b3.ctex"
+uid="uid://c652obbrqyg1e"
+path="res://.godot/imported/Rat.png-916ab4678054fdf42dcd78f2af39e845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/isopod.png"
-dest_files=["res://.godot/imported/isopod.png-f6f7cece6d302d7bfa9d7fc4638b43b3.ctex"]
+source_file="res://assets/cards/Rat.png"
+dest_files=["res://.godot/imported/Rat.png-916ab4678054fdf42dcd78f2af39e845.ctex"]
 
 [params]
 

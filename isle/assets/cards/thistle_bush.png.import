@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgwwk6uxg0r22"
-path="res://.godot/imported/kelp.png-400fe7fbfd6a9f793ac641bb5b207d93.ctex"
+uid="uid://66y7gjp15efb"
+path="res://.godot/imported/thistle_bush.png-6490da8cbe467d716b237a45747e4ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kelp.png"
-dest_files=["res://.godot/imported/kelp.png-400fe7fbfd6a9f793ac641bb5b207d93.ctex"]
+source_file="res://assets/cards/thistle_bush.png"
+dest_files=["res://.godot/imported/thistle_bush.png-6490da8cbe467d716b237a45747e4ad5.ctex"]
 
 [params]
 

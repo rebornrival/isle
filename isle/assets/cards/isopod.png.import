@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbrm0ykitvx3n"
-path="res://.godot/imported/Gleebus.png-5a258296ebbf231716e26fe32ba76116.ctex"
+uid="uid://ddpxl2ny60jm3"
+path="res://.godot/imported/isopod.png-e98565441e9273ee181bb17c7a9fc0d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Gleebus.png"
-dest_files=["res://.godot/imported/Gleebus.png-5a258296ebbf231716e26fe32ba76116.ctex"]
+source_file="res://assets/cards/isopod.png"
+dest_files=["res://.godot/imported/isopod.png-e98565441e9273ee181bb17c7a9fc0d2.ctex"]
 
 [params]
 

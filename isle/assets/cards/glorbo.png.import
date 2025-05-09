@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c652obbrqyg1e"
-path="res://.godot/imported/Rat.png-fb03b01fcfd562031fb8e939601d7774.ctex"
+uid="uid://12fymehtgg52"
+path="res://.godot/imported/glorbo.png-d2fadce7908838114387cb68ee885147.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Rat.png"
-dest_files=["res://.godot/imported/Rat.png-fb03b01fcfd562031fb8e939601d7774.ctex"]
+source_file="res://assets/cards/glorbo.png"
+dest_files=["res://.godot/imported/glorbo.png-d2fadce7908838114387cb68ee885147.ctex"]
 
 [params]
 
