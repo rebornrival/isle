@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8wjyqfxrdlig"
-path="res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"
+uid="uid://c5er3sskqdb1i"
+path="res://.godot/imported/beer.png-fb5b2803a775b0379480cb3ca446ffd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Gleebus.png"
-dest_files=["res://.godot/imported/Gleebus.png-7aaff6adc16ca210a4a3d03ef0623d00.ctex"]
+source_file="res://assets/cards/beer.png"
+dest_files=["res://.godot/imported/beer.png-fb5b2803a775b0379480cb3ca446ffd1.ctex"]
 
 [params]
 
