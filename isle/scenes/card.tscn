@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfokbwnrxk354"]
+
+[ext_resource type="Script" uid="uid://dr0cuxoi4bidb" path="res://script/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://c62pypiuvha7e" path="res://assets/card template.png" id="1_d81rb"]
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_6u4wf")
+
+[node name="CardTemplate" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_d81rb")
+
+[node name="name" type="Label" parent="."]
+offset_left = -182.0
+offset_top = -329.0
+offset_right = -72.0
+offset_bottom = -274.0
+theme_override_font_sizes/font_size = 40
+text = "name"
+vertical_alignment = 1
+
+[node name="health_and_damage" type="Label" parent="."]
+offset_left = -180.0
+offset_top = 30.0
+offset_right = -122.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 30
+text = "1 : 1"
+vertical_alignment = 1
+
+[node name="cost" type="Label" parent="."]
+offset_left = -180.0
+offset_top = 75.0
+offset_right = -91.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 25
+text = "Cost 0"
+
+[node name="ability_and_description" type="Label" parent="."]
+offset_left = -180.0
+offset_top = 118.0
+offset_right = 180.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 20
+text = "ability, stupid explanation
+Blah blah blah"
