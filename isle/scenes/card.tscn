@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfokbwnrxk354"]
 
 [ext_resource type="Script" uid="uid://dr0cuxoi4bidb" path="res://script/card.gd" id="1_6u4wf"]
-[ext_resource type="Texture2D" uid="uid://b8wjyqfxrdlig" path="res://assets/cards/Gleebus.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://12fymehtgg52" path="res://assets/cards/Glorbo.png" id="2_6u4wf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktuci"]
 size = Vector3(1, 1.5, 0.001)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg30u"]
+resource_local_to_scene = true
 albedo_texture = ExtResource("2_6u4wf")
 uv1_scale = Vector3(1, 0.67, 1)
 uv1_offset = Vector3(0.5, 0.5, 0)
@@ -20,7 +21,6 @@ script = ExtResource("1_6u4wf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43683, 0.694851, 0.002)
 pixel_size = 0.0032
 shaded = true
-text = "Gleebus"
 font_size = 20
 outline_size = 4
 horizontal_alignment = 0
@@ -32,7 +32,6 @@ width = 270.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.414265, -0.12667, 0.00164795)
 pixel_size = 0.0032
 shaded = true
-text = "1 : 1"
 outline_size = 4
 horizontal_alignment = 0
 
@@ -40,7 +39,6 @@ horizontal_alignment = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.409769, -0.181091, 0.002)
 pixel_size = 0.0032
 shaded = true
-text = "Cost 0"
 font_size = 20
 outline_size = 4
 horizontal_alignment = 0
@@ -50,7 +48,6 @@ vertical_alignment = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41, -0.266, 0.002)
 pixel_size = 0.0032
 shaded = true
-text = "ability, stupid explanation Blah blah blah"
 font_size = 20
 outline_size = 4
 horizontal_alignment = 0

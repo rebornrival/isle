@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://b0cjp1vfdqnmg"
+path="res://.godot/imported/Knight.png-5141cf8f8be9eef8ced50530ec6d8aaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Knight.png"
+dest_files=["res://.godot/imported/Knight.png-5141cf8f8be9eef8ced50530ec6d8aaf.ctex"]
 
 [params]
 

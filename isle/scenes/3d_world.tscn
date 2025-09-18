@@ -10,3 +10,10 @@ script = ExtResource("1_lyjmo")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.20263)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.851718, 0.524001, 0, -0.524001, 0.851718, 0, 0, 0)
+light_energy = 0.7
+sky_mode = 1
+
+[node name="card_handler" type="Node3D" parent="."]
