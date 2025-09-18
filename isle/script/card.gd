@@ -1,4 +1,4 @@
-extends Node2D
+extends Node3D
 var card_stats
 #0 - name - str
 #1 - base health - int
@@ -10,6 +10,7 @@ var card_stats
 #7 - rarity - str
 #8 - type (support, etc.) - str
 #9 - cost - int
+#10 - png name - string
 func _physics_process(delta: float) -> void:
 	pass
 
@@ -22,3 +23,4 @@ func initialize(card_info):
 		$health_and_damage.text = "Support"
 	$cost.text = "Cost "+str(card_info[9])
 	$ability_and_description.text = card_info[3]
+	$card_mesh.get_surface_override_material(0).albedo_texture = load(card_info[10])
