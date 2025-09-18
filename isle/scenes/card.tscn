@@ -1,47 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfokbwnrxk354"]
+[gd_scene load_steps=5 format=3 uid="uid://cfokbwnrxk354"]
 
 [ext_resource type="Script" uid="uid://dr0cuxoi4bidb" path="res://script/card.gd" id="1_6u4wf"]
-[ext_resource type="Texture2D" uid="uid://c62pypiuvha7e" path="res://assets/card template.png" id="1_d81rb"]
+[ext_resource type="Texture2D" uid="uid://b8wjyqfxrdlig" path="res://assets/cards/Gleebus.png" id="2_6u4wf"]
 
-[node name="card" type="Node2D"]
+[sub_resource type="BoxMesh" id="BoxMesh_ktuci"]
+size = Vector3(1, 1.5, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg30u"]
+albedo_texture = ExtResource("2_6u4wf")
+uv1_scale = Vector3(1, 0.67, 1)
+uv1_offset = Vector3(0.5, 0.5, 0)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="card" type="Node3D"]
 script = ExtResource("1_6u4wf")
 
-[node name="CardTemplate" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(5, 5)
-texture = ExtResource("1_d81rb")
+[node name="name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43683, 0.694851, 0.002)
+pixel_size = 0.0032
+shaded = true
+text = "Gleebus"
+font_size = 20
+outline_size = 4
+horizontal_alignment = 0
+line_spacing = -15.0
+autowrap_mode = 2
+width = 270.0
 
-[node name="name" type="Label" parent="."]
-offset_left = -182.0
-offset_top = -329.0
-offset_right = -72.0
-offset_bottom = -274.0
-theme_override_font_sizes/font_size = 40
-text = "name"
-vertical_alignment = 1
-
-[node name="health_and_damage" type="Label" parent="."]
-offset_left = -180.0
-offset_top = 30.0
-offset_right = -122.0
-offset_bottom = 72.0
-theme_override_font_sizes/font_size = 30
+[node name="health_and_damage" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.414265, -0.12667, 0.00164795)
+pixel_size = 0.0032
+shaded = true
 text = "1 : 1"
-vertical_alignment = 1
+outline_size = 4
+horizontal_alignment = 0
 
-[node name="cost" type="Label" parent="."]
-offset_left = -180.0
-offset_top = 75.0
-offset_right = -91.0
-offset_bottom = 117.0
-theme_override_font_sizes/font_size = 25
+[node name="cost" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.409769, -0.181091, 0.002)
+pixel_size = 0.0032
+shaded = true
 text = "Cost 0"
+font_size = 20
+outline_size = 4
+horizontal_alignment = 0
+vertical_alignment = 0
 
-[node name="ability_and_description" type="Label" parent="."]
-offset_left = -180.0
-offset_top = 118.0
-offset_right = 180.0
-offset_bottom = 290.0
-theme_override_font_sizes/font_size = 20
-text = "ability, stupid explanation
-Blah blah blah"
+[node name="ability_and_description" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41, -0.266, 0.002)
+pixel_size = 0.0032
+shaded = true
+text = "ability, stupid explanation Blah blah blah"
+font_size = 20
+outline_size = 4
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 260.0
+
+[node name="card_mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ktuci")
+surface_material_override/0 = SubResource("StandardMaterial3D_kg30u")

@@ -1,0 +1,3 @@
+Rat;1;1;Crazy?;N/A;Mammal;Rat Bog;Common;Creature;0;res://assets/cards/Rat.png
+The Rats
+The mirror
