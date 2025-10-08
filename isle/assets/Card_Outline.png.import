@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://bv3psmqyvyadi"
+path="res://.godot/imported/Card_Outline.png-c3da8f7d734457bedeae5c7ee90aa937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/Card_Outline.png"
+dest_files=["res://.godot/imported/Card_Outline.png-c3da8f7d734457bedeae5c7ee90aa937.ctex"]
 
 [params]
 

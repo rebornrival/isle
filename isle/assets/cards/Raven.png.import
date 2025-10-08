@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://maf3017foe2b"
+path="res://.godot/imported/Raven.png-54b8ca8c36d7bfb1c08aceaae2891ed3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Raven.png"
+dest_files=["res://.godot/imported/Raven.png-54b8ca8c36d7bfb1c08aceaae2891ed3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://bhfgjov2pomfh"
+path="res://.godot/imported/Peacock.png-603dbffa6600e9558f45e28055baff82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Peacock.png"
+dest_files=["res://.godot/imported/Peacock.png-603dbffa6600e9558f45e28055baff82.ctex"]
 
 [params]
 

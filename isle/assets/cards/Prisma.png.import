@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://b7x5th2mjtobr"
+path="res://.godot/imported/Prisma.png-3cb3b53eb013b9ff470c4d489ed84899.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Prisma.png"
+dest_files=["res://.godot/imported/Prisma.png-3cb3b53eb013b9ff470c4d489ed84899.ctex"]
 
 [params]
 

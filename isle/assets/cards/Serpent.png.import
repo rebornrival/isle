@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://bhyp724bxt44k"
+path="res://.godot/imported/Serpent.png-f6e162acf99231200ed50a822a0e838e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Serpent.png"
+dest_files=["res://.godot/imported/Serpent.png-f6e162acf99231200ed50a822a0e838e.ctex"]
 
 [params]
 

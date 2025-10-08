@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://canddvtmo2k81"
+path="res://.godot/imported/Cheese.png-8f6b4ec1dceb480509a03ca5a58f6e06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Cheese.png"
+dest_files=["res://.godot/imported/Cheese.png-8f6b4ec1dceb480509a03ca5a58f6e06.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://b68l2i3dn0guc"
+path="res://.godot/imported/Wheat_Stalk.png-df0698dce36cc44259ce2d03ff41bc29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Wheat_Stalk.png"
+dest_files=["res://.godot/imported/Wheat_Stalk.png-df0698dce36cc44259ce2d03ff41bc29.ctex"]
 
 [params]
 

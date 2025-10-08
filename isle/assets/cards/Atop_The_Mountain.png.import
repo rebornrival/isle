@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://22g1igcwut1r"
+path="res://.godot/imported/Atop_The_Mountain.png-1c98d5e7d28265f2818d48153784102a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Atop_The_Mountain.png"
+dest_files=["res://.godot/imported/Atop_The_Mountain.png-1c98d5e7d28265f2818d48153784102a.ctex"]
 
 [params]
 

@@ -1,0 +1,243 @@
+[gd_scene load_steps=22 format=3 uid="uid://df8jpp8vteiog"]
+
+[ext_resource type="Script" uid="uid://bcyldglvlvakr" path="res://script/card_board.gd" id="1_i41tr"]
+[ext_resource type="Texture2D" uid="uid://bv3psmqyvyadi" path="res://assets/Card_Outline.png" id="2_wi6u4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi6u4"]
+size = Vector3(1, 1.5, 0.002)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wi6u4"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrxsy"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrxsy"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgv4v"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i41tr"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wi6u4"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_74ad7"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ge8sl"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wdf75"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7oyu"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fo6wt"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d8kx"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r2dv5"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stmik"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ukiys"]
+size = Vector3(1, 1.5, 0.115)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nawcr"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vka5t"]
+size = Vector3(10, 0.185, 7.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i41tr"]
+albedo_color = Color(0.325871, 0.147112, 4.81308e-08, 1)
+
+[node name="card_board" type="Node3D"]
+script = ExtResource("1_i41tr")
+
+[node name="creature_slot_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.4, 0.1, 1)
+
+[node name="slot_1_area" type="Area3D" parent="creature_slot_1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="creature_slot_1/slot_1_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="c_mesh_1" type="MeshInstance3D" parent="creature_slot_1/slot_1_area"]
+mesh = SubResource("BoxMesh_wi6u4")
+surface_material_override/0 = SubResource("StandardMaterial3D_xrxsy")
+
+[node name="Decal" type="Decal" parent="creature_slot_1/slot_1_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="creature_slot_2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.2, 0.1, 1)
+
+[node name="slot_2_area" type="Area3D" parent="creature_slot_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="creature_slot_2/slot_2_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="c_mesh_2" type="MeshInstance3D" parent="creature_slot_2/slot_2_area"]
+mesh = SubResource("BoxMesh_xrxsy")
+surface_material_override/0 = SubResource("StandardMaterial3D_tgv4v")
+
+[node name="Decal" type="Decal" parent="creature_slot_2/slot_2_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="creature_slot_3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.1, 1)
+
+[node name="creature_slot_3_area_3d" type="Area3D" parent="creature_slot_3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="creature_slot_3/creature_slot_3_area_3d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="c_mesh_3" type="MeshInstance3D" parent="creature_slot_3/creature_slot_3_area_3d"]
+mesh = SubResource("BoxMesh_i41tr")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wi6u4")
+
+[node name="Decal" type="Decal" parent="creature_slot_3/creature_slot_3_area_3d"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="creature_slot_4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.2, 0.1, 1)
+
+[node name="slot_4_area" type="Area3D" parent="creature_slot_4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="creature_slot_4/slot_4_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="Decal" type="Decal" parent="creature_slot_4/slot_4_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="c_mesh_4" type="MeshInstance3D" parent="creature_slot_4/slot_4_area"]
+mesh = SubResource("BoxMesh_74ad7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ge8sl")
+
+[node name="creature_slot_5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.4, 0.1, 1)
+
+[node name="slot_5_area" type="Area3D" parent="creature_slot_5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="creature_slot_5/slot_5_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="c_mesh_5" type="MeshInstance3D" parent="creature_slot_5/slot_5_area"]
+mesh = SubResource("BoxMesh_wdf75")
+surface_material_override/0 = SubResource("StandardMaterial3D_g7oyu")
+
+[node name="Decal" type="Decal" parent="creature_slot_5/slot_5_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="support_slot_1" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -4, 0.1, 0.75)
+
+[node name="support_1_area" type="Area3D" parent="support_slot_1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="support_slot_1/support_1_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="Decal" type="Decal" parent="support_slot_1/support_1_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="s_mesh_1" type="MeshInstance3D" parent="support_slot_1/support_1_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 8.35189e-23, 0, 8.35188e-23, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_fo6wt")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3d8kx")
+
+[node name="support_slot_2" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -4, 0.1, 1.95)
+
+[node name="support_2_area" type="Area3D" parent="support_slot_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="support_slot_2/support_2_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="Decal" type="Decal" parent="support_slot_2/support_2_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="s_mesh_2" type="MeshInstance3D" parent="support_slot_2/support_2_area"]
+mesh = SubResource("BoxMesh_r2dv5")
+surface_material_override/0 = SubResource("StandardMaterial3D_stmik")
+
+[node name="support_slot_3" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -4, 0.1, 3.15)
+
+[node name="support_3_area" type="Area3D" parent="support_slot_3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="support_slot_3/support_3_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157396)
+shape = SubResource("BoxShape3D_wi6u4")
+
+[node name="Decal" type="Decal" parent="support_slot_3/support_3_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("2_wi6u4")
+
+[node name="s_mesh_3" type="MeshInstance3D" parent="support_slot_3/support_3_area"]
+mesh = SubResource("BoxMesh_ukiys")
+surface_material_override/0 = SubResource("StandardMaterial3D_nawcr")
+
+[node name="draw_pile" type="Node3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 4, 0.1, 2.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_vka5t")
+surface_material_override/0 = SubResource("StandardMaterial3D_i41tr")
+
+[connection signal="mouse_entered" from="creature_slot_1/slot_1_area" to="." method="_on_slot_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="creature_slot_1/slot_1_area" to="." method="_on_slot_1_area_mouse_exited"]
+[connection signal="mouse_entered" from="creature_slot_2/slot_2_area" to="." method="_on_slot_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="creature_slot_2/slot_2_area" to="." method="_on_slot_2_area_mouse_exited"]
+[connection signal="mouse_entered" from="creature_slot_3/creature_slot_3_area_3d" to="." method="_on_creature_slot_3_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="creature_slot_3/creature_slot_3_area_3d" to="." method="_on_creature_slot_3_area_3d_mouse_exited"]
+[connection signal="mouse_entered" from="creature_slot_4/slot_4_area" to="." method="_on_slot_4_area_mouse_entered"]
+[connection signal="mouse_exited" from="creature_slot_4/slot_4_area" to="." method="_on_slot_4_area_mouse_exited"]
+[connection signal="mouse_entered" from="creature_slot_5/slot_5_area" to="." method="_on_slot_5_area_mouse_entered"]
+[connection signal="mouse_exited" from="creature_slot_5/slot_5_area" to="." method="_on_slot_5_area_mouse_exited"]
+[connection signal="mouse_entered" from="support_slot_1/support_1_area" to="." method="_on_support_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="support_slot_1/support_1_area" to="." method="_on_support_1_area_mouse_exited"]
+[connection signal="mouse_entered" from="support_slot_2/support_2_area" to="." method="_on_support_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="support_slot_2/support_2_area" to="." method="_on_support_2_area_mouse_exited"]
+[connection signal="mouse_entered" from="support_slot_3/support_3_area" to="." method="_on_support_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="support_slot_3/support_3_area" to="." method="_on_support_3_area_mouse_exited"]

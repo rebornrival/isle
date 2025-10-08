@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://c3eky5s4da5bq"
+path="res://.godot/imported/The_Ravenmocker.png-4c16dfff515beb42a0c39ae33d22c698.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/The_Ravenmocker.png"
+dest_files=["res://.godot/imported/The_Ravenmocker.png-4c16dfff515beb42a0c39ae33d22c698.ctex"]
 
 [params]
 

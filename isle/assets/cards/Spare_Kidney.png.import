@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkgjisaclw08w"
-path="res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"
+uid="uid://c6wwuo8ox6k0r"
+path="res://.godot/imported/Spare_Kidney.png-f3127b0e3a67241249fb4628f83e9e6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Hort.png"
-dest_files=["res://.godot/imported/Hort.png-070bd2a47f9ce260d16e9c010398958c.ctex"]
+source_file="res://assets/cards/Spare_Kidney.png"
+dest_files=["res://.godot/imported/Spare_Kidney.png-f3127b0e3a67241249fb4628f83e9e6b.ctex"]
 
 [params]
 
