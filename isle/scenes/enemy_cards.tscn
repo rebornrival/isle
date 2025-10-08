@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhvhbh2jo8nhr"]
+
+[ext_resource type="Script" uid="uid://3px0xf0it6gs" path="res://script/enemy_cards.gd" id="1_lxnsu"]
+[ext_resource type="Texture2D" uid="uid://bv3psmqyvyadi" path="res://assets/Card_Outline.png" id="1_x3xq1"]
+
+[node name="enemy_cards" type="Node3D"]
+script = ExtResource("1_lxnsu")
+
+[node name="active" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="active"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.4, 0.1, -1)
+
+[node name="Decal" type="Decal" parent="active/1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="2" type="Node3D" parent="active"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.2, 0.1, -1)
+
+[node name="Decal" type="Decal" parent="active/2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="3" type="Node3D" parent="active"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.1, -1)
+
+[node name="Decal" type="Decal" parent="active/3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="4" type="Node3D" parent="active"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.2, 0.1, -1)
+
+[node name="Decal" type="Decal" parent="active/4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="5" type="Node3D" parent="active"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.4, 0.1, -1)
+
+[node name="Decal" type="Decal" parent="active/5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="queue" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="queue"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.4, 0.1, -2.75)
+
+[node name="Decal" type="Decal" parent="queue/1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="2" type="Node3D" parent="queue"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.2, 0.1, -2.75)
+
+[node name="Decal" type="Decal" parent="queue/2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="3" type="Node3D" parent="queue"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.1, -2.75)
+
+[node name="Decal" type="Decal" parent="queue/3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="4" type="Node3D" parent="queue"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.2, 0.1, -2.75)
+
+[node name="Decal" type="Decal" parent="queue/4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")
+
+[node name="5" type="Node3D" parent="queue"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.4, 0.1, -2.75)
+
+[node name="Decal" type="Decal" parent="queue/5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.0115831)
+size = Vector3(1, 0.05, 1.5)
+texture_albedo = ExtResource("1_x3xq1")

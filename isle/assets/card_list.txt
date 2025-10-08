@@ -1,5 +1,5 @@
-Rat;1;1;Crazy?;N/A;Mammal;N/A;N/A;Creature;0;res://assets/cards/Rat.png
-The Rats;0;0;They prey at night, they stalk at night, they're the rats.;Doubles the number of rats in play.;N/A;N/A;The Rats;Support;0;res://assets/cards/The_Rats.png
-Gleebus;4;1;It's just Gleebus!;Summons a card from your deck to your hand.;G-Brothers;N/A;Draw;Creature;0;res://assets/cards/Gleebus.png
-Glorbo;1;1;It's Glorbo!;N/A;G-Brothers;N/A;N/A;Creature;0;res://assets/cards/Glorbo.png
-Hort;2;3;Hort...Rage;When near water, Hort gains 1 in each stat.;Mammal;N/A;Water Power;Creature;2;res://assets/cards/Hort.png
+Rat;1;1;Crazy?;N/A;Mammal;N/A;N/A;creature;0;res://assets/cards/Rat.png
+The Rats;0;0;They prey at night, they stalk at night, they're the rats.;Doubles the number of rats in play.;N/A;N/A;The Rats;support;1;res://assets/cards/The_Rats.png
+Gleebus;4;1;It's just Gleebus!;Summons a card from your deck to your hand.;G-Brothers;N/A;Draw;creature;0;res://assets/cards/Gleebus.png
+Glorbo;1;1;It's Glorbo!;N/A;G-Brothers;N/A;N/A;creature;0;res://assets/cards/Glorbo.png
+Hort;2;3;Hort...Rage;When near water, Hort gains 1 in each stat.;Mammal;N/A;Water Power;creature;2;res://assets/cards/Hort.png
