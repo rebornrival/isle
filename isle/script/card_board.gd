@@ -13,24 +13,35 @@ func _physics_process(delta: float) -> void:
 		token_time = false
 	
 	for node in get_children():
-		if node.get_child_count()>1 and node.name != 'draw_pile':
+		if node.get_child_count()>1 and "pile" not in node.name:
 			if node.get_child(0).get_child(0).disabled == false:
 				node.get_child(1).in_play = true
 				node.get_child(1).global_transform = node.global_transform
 				node.get_child(0).get_child(0).disabled = true
-		elif node.name != "draw_pile" and node.name != "MeshInstance3D":
+			if node.get_child(1).dead == true:
+				var card = node.get_child(1)
+				node.remove_child(card)
+				$discard_pile.add_child(card)
+				card.rotation.z += randf_range(-.1,.1)
+		elif "pile" not in node.name and node.name != "MeshInstance3D":
 			node.get_child(0).get_child(0).disabled = false
 	
 	if $draw_pile.get_child_count() > 0:
 		offset = 0
 		for card in $draw_pile.get_children():
 			card.position.z = offset
-			offset -= .01
+			offset -= .02
 			if card.hovering == true and Input.is_action_just_pressed("click") and Globals.tokens > 0:
 				Globals.tokens -= 1
 				card.in_deck = false
 				$draw_pile.remove_child(card)
 				get_parent().get_node("card_handler").add_child(card)
+	
+	if $discard_pile.get_child_count() > 0:
+		offset = 0
+		for card in $discard_pile.get_children():
+			card.position.z = offset
+			offset += 0.02
 
 func _on_slot_1_area_mouse_entered() -> void:
 	hovering = true

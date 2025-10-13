@@ -6,4 +6,4 @@ var selected_card_type
 
 var player_health = 15
 var enemy_health = 15
-var tokens = 0
+var tokens = 1

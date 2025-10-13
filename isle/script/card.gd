@@ -9,9 +9,11 @@ var selected = false
 var current_pos
 var current_height
 var slot 
+var ability_name
 
 var in_deck = false
 var in_play = false
+var dead = false
 #0 - name - str
 #1 - base health - int
 #2 - base damage - int
@@ -24,9 +26,9 @@ var in_play = false
 #9 - cost - int
 #10 - png name - string
 func _physics_process(delta: float) -> void:
-	if hovering == true and in_play == false and in_deck == false:
+	if hovering == true and in_play == false and in_deck == false and dead == false:
 		global_position.z = current_pos+.04
-	if Input.is_action_just_pressed("click") and hovering == true and Globals.tokens >= cost and in_deck == false:
+	if Input.is_action_just_pressed("click") and hovering == true and Globals.tokens >= cost and in_deck == false and dead == false:
 		selected = true
 		Globals.card_selected = true
 	elif Input.is_action_just_pressed("click"):
@@ -37,13 +39,17 @@ func _physics_process(delta: float) -> void:
 		global_position.z = current_pos+.043
 		global_position.y = current_height+0.125
 	
-	if health <= 0 and type == "creature":
-		queue_free()
+	if health <= 0 and type == "creature" and dead == false:
+		if ability_name == "Nutritious":
+			Globals.player_health += 1
+		dead = true
 	
 	if type == 'creature':
 		$card_mesh/health_and_damage.text = str(damage)+' : '+str(health)
-	else:
+	elif type == 'support':
 		$card_mesh/health_and_damage.text = "Support"
+	else:
+		$card_mesh/health_and_damage.text = "Consumable"
 
 func initialize(card_info):
 	card_stats = card_info
@@ -51,6 +57,7 @@ func initialize(card_info):
 	health = int(card_stats[1])
 	damage = int(card_stats[2])
 	cost = int(card_stats[9])
+	ability_name = card_stats[7]
 	$card_mesh/name.text = card_info[0]
 	$card_mesh/cost.text = "Cost "+str(cost)
 	if card_info[4] != "N/A" and card_info[3] != "N/A":
@@ -70,7 +77,7 @@ func take_damage(number):
 	health -= number
 
 func _on_area_3d_mouse_entered() -> void:
-	if in_play == false:
+	if in_play == false and dead == false:
 		Globals.card_hovering = true
 		hovering = true
 	if selected == false:

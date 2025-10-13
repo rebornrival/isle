@@ -219,11 +219,14 @@ mesh = SubResource("BoxMesh_ukiys")
 surface_material_override/0 = SubResource("StandardMaterial3D_nawcr")
 
 [node name="draw_pile" type="Node3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 4, 0.1, 2.5)
+transform = Transform3D(-0.0110653, 0.999939, -4.37087e-08, 0, -4.37114e-08, -1, -0.999939, -0.0110653, 4.8368e-10, 4, 0.1, 0.75)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_vka5t")
 surface_material_override/0 = SubResource("StandardMaterial3D_i41tr")
+
+[node name="discard_pile" type="Node3D" parent="."]
+transform = Transform3D(-0.00111703, 0.999995, -0.00298447, 0, 0.00298448, 0.999996, 1, 0.00111703, -3.33376e-06, 4, 0.1, 2)
 
 [connection signal="mouse_entered" from="creature_slot_1/slot_1_area" to="." method="_on_slot_1_area_mouse_entered"]
 [connection signal="mouse_exited" from="creature_slot_1/slot_1_area" to="." method="_on_slot_1_area_mouse_exited"]

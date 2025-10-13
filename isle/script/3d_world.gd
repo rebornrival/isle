@@ -1,8 +1,8 @@
 extends Node3D
-var deck = ["Rat","Gleebus","The Rats","Rat","Rat","Glorbo","Hort"]
+var deck = ["Rooster","Rooster","Rooster","Hog","Hog","Cat","Rat","Wheat Stalk","Wheat Stalk","Rat","Cat","Rat"]#["Rat","Gleebus","The Rats","Rat","Rat","Glorbo","Hort"]
 var deck_dict : Dictionary
 var card_skew = 0
-var up = true
+var up = 1
 
 var turn_time = 0.0
 var enemy_gone = true
@@ -16,7 +16,7 @@ var enemy_gone = true
 
 func _ready() -> void:
 	read_card_list()
-	$camera_rotation_point.rotation.x = 0.0
+	$AnimationPlayer.play("look up")
 	for i in range(5):
 		var random_card = deck.pick_random()
 		deck.erase(random_card)
@@ -27,13 +27,21 @@ func _ready() -> void:
 		instantiate_card(random_card,"card_board/draw_pile")
 
 func _physics_process(delta: float) -> void:
+	if Globals.player_health <= 0 or Globals.enemy_health <= 0:
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	
-	if Input.is_action_just_pressed("look forward") and up == false:
+	if Input.is_action_just_pressed("look forward") and up == 0 and $AnimationPlayer.is_playing() == false:
 		$AnimationPlayer.play("look up")
-		up = true
-	elif Input.is_action_just_pressed("look back") and up == true:
+		up += 1
+	elif Input.is_action_just_pressed("look back") and up == 1 and $AnimationPlayer.is_playing() == false:
+		$AnimationPlayer.play("look down more")
+		up -= 1
+	elif Input.is_action_just_pressed("look forward") and up == 1 and $AnimationPlayer.is_playing() == false:
+		$AnimationPlayer.play("look up more")
+		up +=1 
+	elif Input.is_action_just_pressed("look back") and up == 2 and $AnimationPlayer.is_playing() == false:
 		$AnimationPlayer.play("look down")
-		up = false
+		up -= 1
 	
 	for card in $card_handler.get_children():
 		var hand_ratio = 0.5
@@ -73,9 +81,9 @@ func _physics_process(delta: float) -> void:
 		turn_time = 1.0
 		enemy_gone = false
 	
-	$your_health.text = str(Globals.player_health)
-	$enemy_health.text = str(Globals.enemy_health)
-	$tokens.text = str(Globals.tokens)
+	$your_health.text = "Health: " + str(Globals.player_health)
+	$enemy_health.text = "Enemy health: "+str(Globals.enemy_health)
+	$tokens.text = "Tokens: " +str(Globals.tokens)
 
 func instantiate_card(card_name,node_path):
 	var card_instance = card_template.instantiate()
@@ -83,6 +91,7 @@ func instantiate_card(card_name,node_path):
 	card_instance.initialize(deck_dict[card_name])
 	if node_path == "card_board/draw_pile":
 		card_instance.in_deck = true
+		card_instance.rotation.z += randf_range(-.05,.05)
 
 func read_card_list():
 	var file = FileAccess.open(card_list_path,FileAccess.READ)
@@ -95,10 +104,10 @@ func read_card_list():
 
 func take_turn():
 	for node in $card_board.get_children():
-		if node.get_child_count() > 1 and node.name != "draw_pile":
+		if node.get_child_count() > 1 and "pile" not in node.name:
 			var card = node.get_child(1)
 			var card_damage = card.attack()
-			if card.slot != null:
+			if card.slot != null and card.dead == false:
 				var enemy_slot = get_node("enemy_cards/active/"+card.slot)
 				if enemy_slot.get_child_count()>1:
 					enemy_slot.get_child(1).take_damage(card_damage)
@@ -118,3 +127,5 @@ func enemy_turn():
 			else:
 				Globals.player_health -= card_damage
 	$card_board.token_time = true
+	if Globals.tokens == 0:
+		Globals.tokens += 1

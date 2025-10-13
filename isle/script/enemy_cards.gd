@@ -1,5 +1,5 @@
 extends Node3D
-var deck = ["Rat","Rat","Rat","Hort","Rat","Glorbo"]
+var deck = ["Rat","Rat","Hog","Hog","Wheat Stalk","Cat","Rooster"]
 var deck_dict: Dictionary
 
 @onready var card_list_path = "res://assets/card_list.txt"
@@ -14,12 +14,13 @@ func _physics_process(delta: float) -> void:
 
 func spawn():
 	var spawn_number
+	var number_list = [1,1,2]
 	var valid_slots = []
 	for node in $queue.get_children():
 		if node.get_child_count() == 1:
 			valid_slots.append(node.name)
 	if len(valid_slots) > 1:
-		spawn_number = randi_range(1,2)
+		spawn_number = number_list.pick_random()
 	else:
 		spawn_number = 1
 	if len(valid_slots) > 0:
