@@ -14,21 +14,6 @@ uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="Animation" id="Animation_vemmd"]
-resource_name = "attack"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("card_mesh:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -0.901, 0.124), Vector3(0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_b2gbo"]
 length = 0.001
 tracks/0/type = "value"
@@ -44,13 +29,28 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_vemmd"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_mesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.901, 0.124), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3vgww"]
 _data = {
 &"RESET": SubResource("Animation_b2gbo"),
 &"attack": SubResource("Animation_vemmd")
 }
 
-[node name="enemy_card" type="Node3D"]
+[node name="enemy_card" type="CharacterBody3D"]
 script = ExtResource("1_vemmd")
 
 [node name="card_mesh" type="MeshInstance3D" parent="."]

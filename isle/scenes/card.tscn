@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfokbwnrxk354"]
+[gd_scene load_steps=13 format=3 uid="uid://cfokbwnrxk354"]
 
 [ext_resource type="Script" uid="uid://dr0cuxoi4bidb" path="res://script/card.gd" id="1_6u4wf"]
-[ext_resource type="Texture2D" uid="uid://bfccg0o5uvn8o" path="res://assets/cards/The_Pestilence.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://2tocvmmyhhd1" path="res://assets/cards/Krill.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://dbwiq1qdsxqw6" path="res://assets/card back.png" id="3_ktuci"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktuci"]
-size = Vector3(1, 1.5, 0.001)
+size = Vector3(1, 1.5, 0.002)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg30u"]
 resource_local_to_scene = true
@@ -14,8 +15,45 @@ uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
 texture_filter = 0
 
+[sub_resource type="BoxMesh" id="BoxMesh_kg30u"]
+size = Vector3(1, 1.5, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sy11y"]
+albedo_texture = ExtResource("3_ktuci")
+uv1_scale = Vector3(1, 0.67, 1)
+uv1_offset = Vector3(0.5, 0.5, 0)
+uv1_triplanar = true
+texture_filter = 0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6u4wf"]
 size = Vector3(0.77, 1.5, 0.002)
+
+[sub_resource type="Animation" id="Animation_ktuci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_mesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_6u4wf"]
 resource_name = "attack"
@@ -32,28 +70,29 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0.900557, 0.123728), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ktuci"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_kg30u"]
+resource_name = "rotate"
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("card_mesh:position")
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -1.5708)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kg30u"]
 _data = {
 &"RESET": SubResource("Animation_ktuci"),
-&"attack": SubResource("Animation_6u4wf")
+&"attack": SubResource("Animation_6u4wf"),
+&"rotate": SubResource("Animation_kg30u")
 }
 
-[node name="card" type="Node3D"]
+[node name="card" type="CharacterBody3D"]
 script = ExtResource("1_6u4wf")
 
 [node name="card_mesh" type="MeshInstance3D" parent="."]
@@ -67,7 +106,7 @@ shaded = true
 font_size = 20
 outline_size = 4
 horizontal_alignment = 0
-line_spacing = -15.0
+line_spacing = -12.75
 autowrap_mode = 2
 width = 270.0
 
@@ -97,6 +136,12 @@ horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 2
 width = 260.0
+
+[node name="card_back" type="MeshInstance3D" parent="card_mesh"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.00121132)
+mesh = SubResource("BoxMesh_kg30u")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy11y")
 
 [node name="Area3D" type="Area3D" parent="."]
 

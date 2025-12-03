@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://cbfu3v75smumu"]
+
+[ext_resource type="Script" uid="uid://dw24lq4ts74u0" path="res://script/counter_wheel.gd" id="1_16htv"]
+[ext_resource type="ArrayMesh" uid="uid://c8jjwgr58bhjh" path="res://assets/counter_wheel.obj" id="1_wfd80"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16htv"]
+albedo_color = Color(0.289874, 0.0614751, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_oywhi"]
+text = "0"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_me7l7"]
+text = "1"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_ses14"]
+text = "2"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_nsrer"]
+text = "3"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_o1jcy"]
+text = "4"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_i0xb0"]
+text = "5"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_ejid3"]
+text = "6"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_igqtq"]
+text = "7"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_o000l"]
+text = "8"
+font_size = 58
+
+[sub_resource type="TextMesh" id="TextMesh_irof7"]
+text = "9"
+font_size = 58
+
+[node name="counter_wheel" type="Node3D"]
+script = ExtResource("1_16htv")
+
+[node name="CounterWheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.809016, 8.34813e-09, 0.587785, 0.587785, -2.56929e-08, -0.809016, 8.34812e-09, 1, -2.56929e-08, 0, 0, 0)
+mesh = ExtResource("1_wfd80")
+surface_material_override/0 = SubResource("StandardMaterial3D_16htv")
+
+[node name="0" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, -3.15544e-29, -4.37114e-08, 1, -4.37114e-08, 0.948827, 0.0036488, 0.004325)
+mesh = SubResource("TextMesh_oywhi")
+
+[node name="1" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(-2.70151e-08, -0.587785, 0.809017, -1, -2.56929e-08, -5.20595e-08, 5.13858e-08, -0.809017, -0.587785, 0.750724, -0.0056975, -0.586175)
+mesh = SubResource("TextMesh_me7l7")
+
+[node name="2" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.66963e-08, -0.951057, 0.309017, -1, -4.1572e-08, -7.39152e-08, 8.3144e-08, -0.309017, -0.951057, 0.264391, -0.00569752, -0.914831)
+mesh = SubResource("TextMesh_ses14")
+skeleton = NodePath("../..")
+
+[node name="3" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(7.07265e-08, -0.951057, -0.309017, -1, -4.1572e-08, -1.0093e-07, 8.3144e-08, 0.309017, -0.951057, -0.328899, -0.00569754, -0.893871)
+mesh = SubResource("TextMesh_nsrer")
+skeleton = NodePath("../..")
+
+[node name="4" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.14438e-07, -0.587785, -0.809017, -1, -2.56929e-08, -1.22786e-07, 5.13858e-08, 0.809017, -0.587785, -0.792347, -0.00569757, -0.528655)
+mesh = SubResource("TextMesh_o1jcy")
+skeleton = NodePath("../..")
+
+[node name="5" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.31134e-07, 4.37114e-08, -1, -1, 1.91069e-15, -1.31134e-07, -3.82137e-15, 1, 4.37114e-08, -0.951757, -0.00569757, 0.04265)
+mesh = SubResource("TextMesh_i0xb0")
+skeleton = NodePath("../..")
+
+[node name="6" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.14438e-07, 0.587785, -0.809017, -1, 2.56929e-08, -1.22786e-07, -5.13858e-08, 0.809017, 0.587785, -0.749359, -0.00569757, 0.587822)
+mesh = SubResource("TextMesh_ejid3")
+skeleton = NodePath("../..")
+
+[node name="7" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(7.07265e-08, 0.951057, -0.309017, -1, 4.1572e-08, -1.0093e-07, -8.3144e-08, 0.309017, 0.951057, -0.261603, -0.00569754, 0.915749)
+mesh = SubResource("TextMesh_igqtq")
+skeleton = NodePath("../..")
+
+[node name="8" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(1.66963e-08, 0.951057, 0.309017, -1, 4.1572e-08, -7.39152e-08, -8.3144e-08, -0.309017, 0.951057, 0.328754, -0.00569752, 0.893918)
+mesh = SubResource("TextMesh_o000l")
+skeleton = NodePath("../..")
+
+[node name="9" type="MeshInstance3D" parent="CounterWheel"]
+transform = Transform3D(-2.70151e-08, 0.587785, 0.809017, -1, 2.56929e-08, -5.20595e-08, -5.13858e-08, -0.809017, 0.587785, 0.791, 0, 0.531)
+mesh = SubResource("TextMesh_irof7")
+skeleton = NodePath("../..")

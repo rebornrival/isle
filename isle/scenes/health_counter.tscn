@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://did2427k6lvmf"]
+
+[ext_resource type="Script" uid="uid://dywosr5sjb5yq" path="res://script/health_counter.gd" id="1_48erw"]
+[ext_resource type="ArrayMesh" uid="uid://07rtlmuafq0o" path="res://assets/counter_frame.obj" id="2_rsv77"]
+[ext_resource type="PackedScene" uid="uid://cbfu3v75smumu" path="res://scenes/counter_wheel.tscn" id="3_rsv77"]
+[ext_resource type="ArrayMesh" uid="uid://bdpdjwn75sx77" path="res://assets/symbols_wheel.obj" id="4_m8hoa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8hoa"]
+albedo_color = Color(0.210764, 0.0357399, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_np1ut"]
+albedo_color = Color(0.305882, 0.0627451, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7stv"]
+albedo_color = Color(0.501961, 0.309804, 0.0588235, 1)
+metallic = 0.5
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pwoc"]
+albedo_color = Color(0.502811, 0.309202, 0.0570543, 1)
+metallic = 0.5
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pecw"]
+albedo_color = Color(0.501961, 0.309804, 0.0588235, 1)
+metallic = 0.5
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atxpe"]
+albedo_color = Color(0.305882, 0.0627451, 0, 1)
+
+[node name="health_counter" type="Node3D"]
+script = ExtResource("1_48erw")
+
+[node name="CounterFrame" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_rsv77")
+surface_material_override/0 = SubResource("StandardMaterial3D_m8hoa")
+surface_material_override/1 = SubResource("StandardMaterial3D_np1ut")
+surface_material_override/2 = SubResource("StandardMaterial3D_g7stv")
+surface_material_override/3 = SubResource("StandardMaterial3D_4pwoc")
+surface_material_override/4 = SubResource("StandardMaterial3D_0pecw")
+
+[node name="counter_wheel" parent="." instance=ExtResource("3_rsv77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.32)
+
+[node name="counter_wheel2" parent="." instance=ExtResource("3_rsv77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.88)
+
+[node name="counter_wheel3" parent="." instance=ExtResource("3_rsv77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.88)
+
+[node name="counter_wheel4" parent="." instance=ExtResource("3_rsv77")]
+transform = Transform3D(0.14781, 0.989016, 0, -0.989016, 0.14781, 0, 0, 0, 1, 0, 0, 1.32)
+
+[node name="SymbolsWheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.809017, -0.587785, -8.74228e-08, -0.587785, -0.809017, 0, -7.07265e-08, 5.13858e-08, -1, 0, 0, 2.2)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 1.76)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -0.44)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.809017, 0.587785, 8.74228e-08, 0.587785, -0.809017, 0, 7.07265e-08, 5.13858e-08, -1, 0, 0, 0.44)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.809017, 0.587785, 8.74228e-08, 0.587785, -0.809017, 0, 7.07265e-08, 5.13858e-08, -1, 0, 0, -1.76)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.309017, -0.951057, -8.74228e-08, -0.951057, 0.309017, 0, 2.70151e-08, 8.3144e-08, -1, 0, 0, -2.2)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")
+
+[node name="SymbolsWheel4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.309017, 0.951057, -8.74228e-08, 0.951057, 0.309017, 0, 2.70151e-08, -8.3144e-08, -1, 0, 0, 0)
+mesh = ExtResource("4_m8hoa")
+surface_material_override/0 = SubResource("StandardMaterial3D_atxpe")

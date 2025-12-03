@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgs30rsl8yex5"]
+
+[ext_resource type="Script" uid="uid://cageguxcok8ai" path="res://script/token.gd" id="1_7438t"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uqult"]
+height = 0.085
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7438t"]
+albedo_color = Color(0.615218, 0.428965, 1.92523e-07, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_20bui"]
+height = 0.0857568
+
+[node name="token" type="RigidBody3D"]
+mass = 0.318
+script = ExtResource("1_7438t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uqult")
+surface_material_override/0 = SubResource("StandardMaterial3D_7438t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -7.87356e-05, 0)
+shape = SubResource("CylinderShape3D_20bui")

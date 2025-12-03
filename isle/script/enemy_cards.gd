@@ -1,6 +1,10 @@
 extends Node3D
-var deck = ["Rat","Rat","Rat","Hort","Rat","Glorbo"]
+var deck = ["Rat","Rat","Hog","Hog","Wheat Stalk","Cat","Rooster"]
 var deck_dict: Dictionary
+var delta_var
+
+var done_moving = true
+var spawned = true
 
 @onready var card_list_path = "res://assets/card_list.txt"
 @onready var card_template = preload("res://scenes/enemy_card.tscn")
@@ -10,16 +14,31 @@ func _ready() -> void:
 	spawn()
 
 func _physics_process(delta: float) -> void:
-	pass
+	delta_var = delta
+	
+	for node in $queue.get_children():
+		if node.get_child_count() > 1 and get_node("active/"+node.name).get_child_count() == 1:
+			var card = node.get_child(1)
+			if card.moved == true:
+				node.remove_child(card)
+				get_node("active/"+node.name).add_child(card)
+				card.global_transform = card.get_parent().global_transform
+				card.velocity = Vector3(0,0,0)
+				done_moving = true
+	
+	if done_moving == true and spawned == false:
+		spawn()
+		spawned = true
 
 func spawn():
 	var spawn_number
+	var number_list = [1,1,2]
 	var valid_slots = []
 	for node in $queue.get_children():
 		if node.get_child_count() == 1:
 			valid_slots.append(node.name)
 	if len(valid_slots) > 1:
-		spawn_number = randi_range(1,2)
+		spawn_number = number_list.pick_random()
 	else:
 		spawn_number = 1
 	if len(valid_slots) > 0:
@@ -33,12 +52,16 @@ func spawn():
 			card_instance.global_transform = card_instance.get_parent().global_transform
 
 func move_up():
+	done_moving = false
+	var anything = 0
 	for node in $queue.get_children():
 		if node.get_child_count() > 1 and get_node("active/"+node.name).get_child_count() == 1:
 			var card = node.get_child(1)
-			node.remove_child(card)
-			get_node("active/"+node.name).add_child(card)
-			card.global_transform = card.get_parent().global_transform
+			card.velocity = (get_node("active/"+node.name).global_position-card.global_position).normalized()*15
+			card.move_to_play(get_node("active/"+node.name).global_position)
+			anything += 1
+	if anything == 0:
+		done_moving = true
 
 func read_card_list():
 	var file = FileAccess.open(card_list_path,FileAccess.READ)

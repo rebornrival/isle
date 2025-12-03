@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdvhhw0uefryn"]
+
+[ext_resource type="Script" uid="uid://dbx520ls5a47w" path="res://script/end_screen.gd" id="1_kq7ac"]
+
+[node name="end screen" type="Node2D"]
+script = ExtResource("1_kq7ac")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1153.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 60
+text = "You win"
+horizontal_alignment = 1
+vertical_alignment = 1

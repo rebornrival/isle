@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 
 Globals="*res://script/globals.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+
 [input]
 
 click={
