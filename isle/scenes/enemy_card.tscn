@@ -50,7 +50,7 @@ _data = {
 &"attack": SubResource("Animation_vemmd")
 }
 
-[node name="enemy_card" type="Node3D"]
+[node name="enemy_card" type="CharacterBody3D"]
 script = ExtResource("1_vemmd")
 
 [node name="card_mesh" type="MeshInstance3D" parent="."]

@@ -1,0 +1,98 @@
+[gd_scene load_steps=12 format=3 uid="uid://crlwwhj3d2jht"]
+
+[ext_resource type="Script" uid="uid://dupo57kxb20fw" path="res://script/turn_bell.gd" id="1_dm8nu"]
+[ext_resource type="ArrayMesh" uid="uid://4up8vo5w10vr" path="res://assets/turn_bell.obj" id="1_tk8pr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm8nu"]
+albedo_color = Color(0.47278, 0.362291, 0.0751776, 1)
+metallic = 0.6
+roughness = 0.74
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_njqtq"]
+albedo_color = Color(0.254467, 0.105321, 0, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ja5w0"]
+height = 1.61816
+radius = 0.795898
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_62631"]
+height = 1.52271
+radius = 0.163086
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ja5w0"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_62631"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_dm8nu"]
+resource_name = "ring"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.436332), Vector3(0, 0, 0), Vector3(0, 0, -0.436332), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_njqtq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ja5w0"]
+_data = {
+&"RESET": SubResource("Animation_njqtq"),
+&"ring": SubResource("Animation_dm8nu")
+}
+
+[node name="turn_bell" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_dm8nu")
+
+[node name="TurnBell" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.61822, 0)
+mesh = ExtResource("1_tk8pr")
+surface_material_override/0 = SubResource("StandardMaterial3D_dm8nu")
+surface_material_override/1 = SubResource("StandardMaterial3D_njqtq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.07769, 0)
+shape = SubResource("CylinderShape3D_ja5w0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.513852, 0)
+shape = SubResource("CylinderShape3D_62631")
+
+[node name="highlight_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, -2.61822, 0)
+mesh = ExtResource("1_tk8pr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ja5w0")
+surface_material_override/1 = SubResource("StandardMaterial3D_62631")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ja5w0")
+}
+speed_scale = 4.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

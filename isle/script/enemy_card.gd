@@ -1,9 +1,16 @@
-extends Node3D
+extends CharacterBody3D
+
 var card_stats
 var health
 var damage
 var type
 var ability_name
+
+var move_time #: float
+var moved = false
+
+var attack_time : float
+var attack_started = false
 
 func _physics_process(delta: float) -> void:
 	if health <= 0:
@@ -15,6 +22,16 @@ func _physics_process(delta: float) -> void:
 		$card_mesh/health_and_damage.text = str(damage)+' : '+str(health)
 	else:
 		$card_mesh/health_and_damage.text = "Support"
+	
+	if move_time != null and move_time > 0.0:
+		move_time -= delta
+	if move_time != null and move_time <= 0.0 and moved == false:
+		moved = true
+	
+	if attack_time != null and attack_time >= 0.0:
+		attack_time -= delta
+	
+	move_and_slide()
 
 func attack():
 	if damage != 0:
@@ -38,3 +55,6 @@ func initialize(card_info):
 	else:
 		$card_mesh/ability_and_description.text = card_info[3]
 	$card_mesh.get_surface_override_material(0).albedo_texture = load(card_info[10])
+
+func move_to_play(p1):
+	move_time = global_position.distance_to(p1)/15

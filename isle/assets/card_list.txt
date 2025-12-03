@@ -7,4 +7,5 @@ Hort;2;3;Hort...Rage;When near water, Hort gains 1 in each stat.;Mammal;N/A;Wate
 Hog;1;2;Brother, may I have some oats?;N/A;Mammal;N/A;N/A;creature;2;res://assets/cards/Hog.png
 Cat;1;1;MEOW;+1 damage to bugs;Mammal;N/A;Bug Diet;creature;1;res://assets/cards/cat.png
 Wheat Stalk;1;0;a wheat sways in your hand, one last remnant from the real world.;When destroyed, you gain one player health.;Plant;N/A;Nutritious;creature;1;res://assets/cards/Wheat_Stalk.png
-Wheel of Cheese;N/A;N/A;Choese;temporarily increase player health by 2;N/A;N/A;N/A;consumable;1;res://assets/cards/Cheese.png
+Wheel of Cheese;N/A;N/A;Choese;Temporarily increase player health by 2;N/A;N/A;N/A;consumable;1;res://assets/cards/Cheese.png
+The Unmatched Power of The Sun;N/A;N/A;The dazzling rays are absorbed by the many forest creatures.;Increases the health of all plant cards by 2.;N/A;N/A;sun;support;1;res://assets/cards/The_Unmatched_power_of_The_Sun.png
