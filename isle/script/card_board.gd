@@ -9,6 +9,7 @@ var token_time := false
 @onready var token = preload("res://scenes/token.tscn")
 
 var offset = 0
+var area_hovering := false
 
 func _ready() -> void:
 	spawn_token()
@@ -48,31 +49,29 @@ func _physics_process(delta: float) -> void:
 			node.get_child(0).get_child(0).disabled = false
 	
 	if $draw_pile.get_child_count() > 0:
+		if area_hovering == true and Globals.card_selected == false and Input.is_action_just_pressed("click") and Globals.tokens > 0:
+			var card = $draw_pile.get_child($draw_pile.get_child_count()-1)
+			Globals.tokens -= 1
+			destroy_token(1)
+			card.in_deck = false
+			var temp_location = card.global_position
+			$draw_pile.remove_child(card)
+			get_parent().get_node("card_handler").add_child(card)
+			var hand_ratio = 0.5
+			if get_parent().get_node("card_handler").get_child_count() > 1:
+				hand_ratio = float(card.get_index())/float(get_parent().get_node("card_handler").get_child_count()-1)
+			if get_parent().get_node("card_handler").get_child_count()>2:
+				card.velocity = ((card.global_position+Vector3(spread_curve.sample(hand_ratio)*(1.5+(0.1*(get_parent().get_node("card_handler").get_child_count()-7))),0,0)) - temp_location).normalized()*15
+			else:
+				card.velocity = ((card.global_position+Vector3(spread_curve.sample(hand_ratio)*0.5,0,0)) - temp_location).normalized()*15
+			card.draw($draw_pile.global_position+Vector3(0,0,($draw_pile.get_child_count()-1)*0.02),Vector3(0.0,0.0,rotation_curve.sample(hand_ratio)/4))
+		
+		$MeshInstance3D/deck_area/CollisionShape3D.shape.size.y = 0.04*$draw_pile.get_child_count()
 		offset = 0
 		for card in $draw_pile.get_children():
 			if card.in_deck == true:
 				card.position.z = offset
 				offset -= .02
-			if card.hovering == true and Globals.tokens > 0:
-				hover_token(1)
-			else:
-				if Globals.card_hovering == false and Globals.card_selected == false:
-					fall_token()
-			if card.hovering == true and Input.is_action_just_pressed("click") and Globals.tokens > 0:
-				Globals.tokens -= 1
-				get_parent().get_node("card_board").destroy_token(1)
-				card.in_deck = false
-				var temp_location = card.global_position
-				$draw_pile.remove_child(card)
-				get_parent().get_node("card_handler").add_child(card)
-				var hand_ratio = 0.5
-				if get_parent().get_node("card_handler").get_child_count() > 1:
-					hand_ratio = float(card.get_index())/float(get_parent().get_node("card_handler").get_child_count()-1)
-				if get_parent().get_node("card_handler").get_child_count()>2:
-					card.velocity = ((card.global_position+Vector3(spread_curve.sample(hand_ratio)*(1.5+(0.1*(get_parent().get_node("card_handler").get_child_count()-7))),0,0)) - temp_location).normalized()*15
-				else:
-					card.velocity = ((card.global_position+Vector3(spread_curve.sample(hand_ratio)*0.5,0,0)) - temp_location).normalized()*15
-				card.draw($draw_pile.global_position+Vector3(0,0,($draw_pile.get_child_count()-1)*0.02),Vector3(0.0,0.0,rotation_curve.sample(hand_ratio)/4))
 	
 	if $discard_pile_consumable.get_child_count() > 0:
 		offset = 0
@@ -102,17 +101,18 @@ func hover_token(n:int):
 		token_to_fall.start_pos = null
 	for i in range(n):
 		var token_to_hover = $MeshInstance3D/token_spawn.get_child($MeshInstance3D/token_spawn.get_child_count()-(1+i))
-		if token_to_hover.start_pos == null:
-			token_to_hover.start_pos = token_to_hover.global_position
+		token_to_hover.floating = true
 		token_to_hover.gravity_scale = 0.0
-		token_to_hover.position.y = token_to_hover.start_pos.y + 0.5
 		token_to_hover.angular_velocity = Vector3(0,0,0)
-		token_to_hover.linear_velocity = Vector3(0,0,0)
+		if token_to_hover.global_position.y < -.35:
+			token_to_hover.linear_velocity = Vector3(0,5,0)
 
 func fall_token():
 	for single_token in $MeshInstance3D/token_spawn.get_children():
 		single_token.gravity_scale = 1.0
 		single_token.start_pos = null
+		single_token.floating = false
+		single_token.linear_velocity = Vector3(0,0,0)
 
 func _on_slot_1_area_mouse_entered() -> void:
 	hovering = true
@@ -212,3 +212,13 @@ func _on_discard_pile_area_mouse_entered() -> void:
 func _on_discard_pile_area_mouse_exited() -> void:
 	$discard_pile_area/MeshInstance3D.get_surface_override_material(0).albedo_color = Color(1,1,1,0)
 	Globals.slot_selected = ''
+
+func _on_deck_area_mouse_entered() -> void:
+	area_hovering = true
+	if Globals.card_selected == false and Globals.tokens > 0:
+		hover_token(1)
+
+func _on_deck_area_mouse_exited() -> void:
+	if Globals.card_selected == false:
+		fall_token()
+	area_hovering = false

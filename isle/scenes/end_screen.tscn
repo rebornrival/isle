@@ -6,9 +6,21 @@
 script = ExtResource("1_kq7ac")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1153.0
-offset_bottom = 650.0
+offset_left = 399.0
+offset_top = 8.0
+offset_right = 1552.0
+offset_bottom = 658.0
 theme_override_font_sizes/font_size = 60
 text = "You win"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 626.0
+offset_right = 1267.0
+offset_bottom = 835.0
+theme_override_font_sizes/font_size = 36
+text = "Return to title screen"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

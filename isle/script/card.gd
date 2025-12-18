@@ -38,6 +38,9 @@ var attack_time : float
 var attack_started := false
 
 var board = null
+
+var tall = false
+var short = false
 #0 - name - str
 #1 - base health - int
 #2 - base damage - int
@@ -151,19 +154,6 @@ func attack():
 func take_damage(number):
 	health -= number
 
-func _on_area_3d_mouse_entered() -> void:
-	if in_play == false and dead == false:
-		Globals.card_hovering = true
-		hovering = true
-		Globals.hover_cost = cost
-	if selected == false:
-		current_pos = global_position.z
-		current_height = global_position.y
-
-func _on_area_3d_mouse_exited() -> void:
-	hovering = false
-	Globals.card_hovering = false
-
 func move(p1,r1):
 	desired_rot = r1
 	move_time = global_position.distance_to(p1)/15
@@ -178,3 +168,18 @@ func draw(starting_pos,end_rot):
 	global_position = starting_pos
 	rotation_degrees = Vector3(90,-90,0)
 	draw_rot = end_rot
+
+func _on_area_3d_mouse_entered() -> void:
+	if in_play == false and dead == false:
+		Globals.card_hovering = true
+		Globals.hover_cost = cost
+	if selected == false and hovering == false:
+		hovering = true
+		current_pos = global_position.z
+		current_height = global_position.y
+		$Area3D/CollisionShape3D.shape.size.y = 1.5
+
+func _on_area_3d_mouse_exited() -> void:
+	hovering = false
+	Globals.card_hovering = false
+	$Area3D/CollisionShape3D.shape.size.y = 1.4
