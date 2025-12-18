@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc77hpbjdbgpv"]
+
+[ext_resource type="Script" uid="uid://cbviwt16s3w62" path="res://script/title_scene.gd" id="1_6jsh8"]
+
+[node name="title_scene" type="Node2D"]
+script = ExtResource("1_6jsh8")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1930.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 236
+text = "ISLE (DEMO)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_button" type="Button" parent="."]
+offset_left = 696.0
+offset_top = 587.0
+offset_right = 1244.0
+offset_bottom = 777.0
+theme_override_font_sizes/font_size = 81
+text = "Play"
+
+[node name="esc_button" type="Button" parent="."]
+offset_left = 837.0
+offset_top = 858.0
+offset_right = 1118.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 36
+text = "Close game"
+
+[node name="instructions" type="Button" parent="."]
+offset_left = 1738.0
+offset_top = 981.0
+offset_right = 1891.0
+offset_bottom = 1050.0
+text = "instructions"
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="esc_button" to="." method="_on_esc_button_pressed"]
+[connection signal="pressed" from="instructions" to="." method="_on_instructions_pressed"]

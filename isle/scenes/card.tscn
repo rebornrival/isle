@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cfokbwnrxk354"]
 
 [ext_resource type="Script" uid="uid://dr0cuxoi4bidb" path="res://script/card.gd" id="1_6u4wf"]
-[ext_resource type="Texture2D" uid="uid://2tocvmmyhhd1" path="res://assets/cards/Krill.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://balf1keyahug2" path="res://assets/cards/The_Unmatched_Power_of_The_Sun.png" id="2_ktuci"]
 [ext_resource type="Texture2D" uid="uid://dbwiq1qdsxqw6" path="res://assets/card back.png" id="3_ktuci"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktuci"]
@@ -9,7 +9,7 @@ size = Vector3(1, 1.5, 0.002)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg30u"]
 resource_local_to_scene = true
-albedo_texture = ExtResource("2_6u4wf")
+albedo_texture = ExtResource("2_ktuci")
 uv1_scale = Vector3(1, 0.67, 1)
 uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
@@ -26,7 +26,7 @@ uv1_triplanar = true
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6u4wf"]
-size = Vector3(0.77, 1.5, 0.002)
+size = Vector3(0.78, 1.4, 0.002)
 
 [sub_resource type="Animation" id="Animation_ktuci"]
 length = 0.001
